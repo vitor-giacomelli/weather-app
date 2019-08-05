@@ -1,21 +1,46 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container p-4">
+  <div class ="row">
+      <div class="col md 6" style="text-align: center">
+          <a href="/home" class="btn btn-secondary">Início</a>
+        </div>
+        <div class="col md 6" style="text-align: center">
+            <a href="/setting" class="btn btn-secondary">Lista de Cidades</a>
+          </div>
+  </div>
+  <div class="row">    
+    <div class="col md 6">
+      <div class="card card-body">
+          <img width="180" alt="Weather Logo" src="data:image/png;base64,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" class="mx-auto">       
+          <form (submit)="submitLocation(cityName, countryCode)">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nome da cidade" #cityName>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Código do país" #countryCode>
+          </div>          
+            <button class="btn btn-primary btn-block mt-2">Verificar clima</button>
+        </form>
+      </div>
+    </div>
+    <div class="col md 6">
+      
+      <div *ngIf="weather" class="card card-body" style="text-align: center">
+          <form (submit)="postCidade(nomeCidade, pais, codigoCidade)">
+        <div><p style="display: inline">Cidade: </p><p style="display: inline" #nomeCidade>{{weather.name}}</p></div>
+        <div><p style="display: inline">País: </p><p style="display: inline" #pais>{{weather.sys.country}}</p></div>
+        <div><p style="display: inline">Código: </p><p style="display: inline" #codigoCidade>{{weather.id}}</p></div>
+        <div><p style="display: inline">Temperatura: </p><p style="display: inline">{{weather.main.temp}}°C</p></div>
+        <div><p style="display: inline">Latitude: </p> <p style="display: inline">{{weather.coord.lat}}</p></div>
+        <div><p style="display: inline">Longitude: </p><p style="display: inline">{{weather.coord.lon}}</p></div>
+        <div><p style="display: inline">Humidade: </p><p style="display: inline">{{weather.main.humidity}}%</p></div>
+        <div><p style="display: inline; text-transform: capitalize">Descrição: {{weather.weather[0].description}}</p></div>
+        <button class="btn btn-primary btn-block mt-2">Adicionar à Lista</button>
+      </form>
+      </div>
+    
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<router-outlet> </router-outlet>
 
-<router-outlet></router-outlet>
+  
