@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   weather;
   cidades;
-  public orlw2: any;
+  
   constructor(private weatherService: WeatherService, private apiBackendService: BackendApiService) {
 
   }
