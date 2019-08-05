@@ -18,7 +18,7 @@ import { WeatherService } from '../services/weather.service';
 export class SettingComponent implements OnInit {
   dataSource = ELEMENT_DATA;
   columnsToDisplay = ['Cidade', 'Código', 'País',];
-  expandedElement: PeriodicElement | null;
+  expandedElement: Cidade | null;
   city: string;
   code: string;
   weather;
@@ -35,7 +35,6 @@ export class SettingComponent implements OnInit {
     this.weatherService.getForecast(code)
       .subscribe(
         res => {
-          debugger;
           console.log(res);
           this.weather = res;
           //@ts-ignore
@@ -58,19 +57,18 @@ export class SettingComponent implements OnInit {
   }
 
 }
-var ELEMENT_DATA: PeriodicElement[] = [
+var ELEMENT_DATA: Cidade[] = [
   {
     Cidade: 'Moscow',
     Código: 524901,
     País: 'RU',
-    dia1: `Hydrogen is a chemical element with symbol H and atomic number 1. With a standard
-        atomic weight of 1.008, hydrogen is the lightest element on the periodic table.`,
+    dia1: ``,
     dia2: '',
     dia3: '',
     dia4: '',
     dia5: ''
   }];
-export interface PeriodicElement {
+export interface Cidade {
   Cidade: string;
   Código: number;
   País: string;

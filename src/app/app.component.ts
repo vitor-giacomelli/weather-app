@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
   weather;
   cidades;
+  cidadeRetorno;
   
   constructor(private weatherService: WeatherService, private apiBackendService: BackendApiService) {
 
@@ -33,16 +34,15 @@ export class AppComponent implements OnInit {
   }
 
   postCidade(nomeCidade: HTMLElement, pais: HTMLElement, codigoCidade: HTMLElement) {
-    this.getCidades();
     var x = +codigoCidade.innerHTML;
     var cidade = new CidadeEntityComponent(nomeCidade.innerHTML, pais.innerHTML, x);
     this.apiBackendService.postCidade(cidade)
       .subscribe(res => {
         console.log(res);
+        this.cidadeRetorno = res;
       },
         err => {
           console.log(err);
-
         });
 
   }
